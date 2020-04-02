@@ -1,0 +1,17 @@
+﻿  lib.c
+c:\users\даша\source\repos\sort\sort\lib.c(149): warning C4028: формальный параметр 2 отличается от объявления
+c:\users\даша\source\repos\sort\sort\lib.c(149): warning C4028: формальный параметр 3 отличается от объявления
+c:\users\даша\source\repos\sort\sort\lib.c(149): warning C4029: объявленный список формальных параметров отличается от объявления
+c:\users\даша\source\repos\sort\sort\lib.c(149): warning C4273: qsort: несовместимая компоновка dll
+  c:\program files\windows kits\10\include\10.0.17763.0\ucrt\corecrt_search.h(56): note: см. предыдущее определение "qsort"
+c:\users\даша\source\repos\sort\sort\lib.c(209): warning C4013: getch: нет определения; предполагается "extern" с возвратом типа "int"
+  main.c
+c:\users\даша\source\repos\sort\sort\lib.h(32): warning C4030: первый список формальных параметров длиннее второго
+c:\users\даша\source\repos\sort\sort\lib.h(32): warning C4028: формальный параметр 1 отличается от объявления
+c:\users\даша\source\repos\sort\sort\lib.h(32): warning C4028: формальный параметр 2 отличается от объявления
+c:\users\даша\source\repos\sort\sort\lib.h(32): warning C4028: формальный параметр 3 отличается от объявления
+c:\users\даша\source\repos\sort\sort\lib.h(32): warning C4273: qsort: несовместимая компоновка dll
+  c:\program files\windows kits\10\include\10.0.17763.0\ucrt\corecrt_search.h(56): note: см. предыдущее определение "qsort"
+  Создание кода...
+     Создается библиотека C:\Users\Даша\source\repos\sort\Debug\sort.lib и объект C:\Users\Даша\source\repos\sort\Debug\sort.exp
+  sort.vcxproj -> C:\Users\Даша\source\repos\sort\Debug\sort.exe

@@ -1,0 +1,9 @@
+﻿  lib.c
+c:\users\даша\source\repos\ststudent\ststudent\lib.c(27): warning C4013: getch: нет определения; предполагается "extern" с возвратом типа "int"
+c:\users\даша\source\repos\ststudent\ststudent\lib.c(45): warning C4133: =: несовместимые типы - из "StudentEntry *" в "StudentEntry *"
+c:\users\даша\source\repos\ststudent\ststudent\lib.c(53): warning C4477: "scanf_s": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "int"
+c:\users\даша\source\repos\ststudent\ststudent\lib.c(61): warning C4133: =: несовместимые типы - из "char *" в "int *"
+c:\users\даша\source\repos\ststudent\ststudent\lib.c(66): warning C4133: =: несовместимые типы - из "char *" в "int *"
+c:\users\даша\source\repos\ststudent\ststudent\lib.c(75): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+c:\users\даша\source\repos\ststudent\ststudent\lib.c(85): warning C4133: =: несовместимые типы - из "StudentEntry *" в "StudentEntry *"
+  StStudent.vcxproj -> C:\Users\Даша\source\repos\StStudent\x64\Debug\StStudent.exe

@@ -1,0 +1,9 @@
+﻿  DoubleList.c
+c:\users\даша\source\repos\auditorka\auditorka\doublelist.c(13): warning C4101: dwTemp: неиспользованная локальная переменная
+c:\users\даша\source\repos\auditorka\auditorka\doublelist.c(35): warning C4101: dwTemp: неиспользованная локальная переменная
+  Создание кода
+  5 of 6 functions (83.3%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+  Создание кода завершено
+    0 functions had inline decision re-evaluated but remain unchanged
+  auditorka.vcxproj -> C:\Users\Даша\source\repos\auditorka\Release\auditorka.exe

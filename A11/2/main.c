@@ -1,59 +1,73 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<stdarg.h>
-double summ(int n,...)    {
-    double* p = &n;   
-    p++;
-    double sum = 0;
-    while(n){
-        sum += (*p);         
-        p++;             
-        n--;
-    }
-    return sum;  
+#include <stdio.h>
+#include <windows.h>
+#include <conio.h>
+#include <io.h>
+#include <string.h>
+char* WcharToChar(WCHAR* Name) {
+	int k = 0;
+	char* Ans = malloc(k * sizeof(char));
+	for (int i = 0; i < MAX_PATH; i++) {
+		k++;
+		Ans = realloc(Ans, k * sizeof(char));
+		Ans[k - 1] = (char)Name[i];
+	}
+	k++;
+	Ans[k - 1] = '\0';
+	return Ans;
 }
-double summ2(int n,...) {
-    va_list args;
-    double sum = 0;
-    va_start(args, n);
-    while (n) {
-        sum += va_arg(args, double);
-        n--;
-    }
-    va_end(args);
-    return sum;
+IMAGE_NT_HEADERS* GetHeader(LPBYTE pBase) {
+	if (pBase == NULL)
+		return NULL;
+	IMAGE_DOS_HEADER* pDosHeader = (IMAGE_DOS_HEADER*)pBase;
+	if (IsBadReadPtr(pDosHeader, sizeof(IMAGE_DOS_HEADER)))
+		return NULL;
+	if (pDosHeader->e_magic != IMAGE_DOS_SIGNATURE)
+		return NULL;
+	IMAGE_NT_HEADERS* pHeader = (IMAGE_NT_HEADERS*)(pBase + pDosHeader->e_lfanew);
+	if (IsBadReadPtr(pHeader, sizeof(IMAGE_NT_HEADERS)))
+		return NULL;
+	if (pHeader->Signature != IMAGE_NT_SIGNATURE)
+		return NULL;
+	return pHeader;
 }
-char* strsum(char* f, char* f2) {
-    char* ans = (char*)malloc((strlen(f) + strlen(f2)) * sizeof(char));
-    for (int i = 0; i < strlen(f); i++) {
-        ans[i]= f[i];
-    }
-    int k = 0;
-    for (int i = strlen(f); i < strlen(f) + strlen(f2); i++){
-        ans[i] = f2[k];
-        k++;
-    }
-    ans[strlen(f) + strlen(f2)] = '\0';
-    return ans;
-}
-char* concat(char* first, ...) {
-    va_list args;
-    va_start(args, first);
-    char* ans = first;
-    while (1) {
-        char* new =va_arg(args, char*);
-        ans = strsum(ans, new);
-        if (new == "\0") break;
-   }
-    return ans;
-}
-int main() {
-    double sum = summ(5, 0.5, 2.2, 3.1, 2.4, 1.2);
-    double sum2 = summ2(5, 0.5, 2.2, 3.1, 2.4, 1.2);
-    printf("sum = %f and %f\n", sum, sum2);
-    char* s = concat("one ", "two ", "three ", "four s", "\0");
-    printf("%s", s);
-    return 0;
+int main()
+{
+	WIN32_FIND_DATA FindFileData;
+	HANDLE hf = FindFirstFile(L"*.*", &FindFileData);
+	if (hf != INVALID_HANDLE_VALUE)
+	{
+		do
+		{
+			FILE* fp;
+			char* File = WcharToChar(FindFileData.cFileName);
+			if (File[0] == '.') {
+				continue;
+			}
+			int t = 1;
+			for (int i = 0; i < strlen(File); i++) {
+				if (File[i] == '.') {
+					t = 0;
+				}
+			}
+			if (t == 1) {
+				continue;
+			}
+			
+			fopen_s(&fp, File, "r+");
+			char c;
+			fscanf_s(fp,"%c", &c);
+			char c1;
+			fscanf_s(fp,"%c", &c1);
+			char c2;
+			fscanf_s(fp,"%c", &c2);
+			char c3;
+			fscanf_s(fp,"%c", &c3);
+			if (c == 'M' && c1 == 'Z' || c == '0' && c1 == 'x' && c2 == '3' && c3 == 'C') {
+				printf("%s\n", File);
+			}
+			fclose(fp);
+		} while (FindNextFile(hf, &FindFileData) != 0);
+		FindClose(hf);
+	}
+	return 0;
 }

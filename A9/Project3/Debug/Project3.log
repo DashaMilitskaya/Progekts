@@ -1,0 +1,7 @@
+﻿  DoubleList.c
+c:\users\даша\source\repos\project3\project3\doublelist.c(21): warning C4047: функция: "LPSTR" отличается по уровням косвенного обращения от "char (*)[267]"
+c:\users\даша\source\repos\project3\project3\doublelist.c(21): warning C4024: GetUserNameA: различные типы для формального и фактического параметров 1
+c:\users\даша\source\repos\project3\project3\doublelist.c(30): warning C4047: функция: "LPSTR" отличается по уровням косвенного обращения от "char (*)[267]"
+c:\users\даша\source\repos\project3\project3\doublelist.c(30): warning C4024: GetComputerNameA: различные типы для формального и фактического параметров 1
+c:\users\даша\source\repos\project3\project3\doublelist.c(37): warning C4244: =: преобразование "time_t" в "long", возможна потеря данных
+  Project3.vcxproj -> C:\Users\Даша\source\repos\Project3\Debug\Project3.exe

@@ -1,0 +1,8 @@
+﻿  main.c
+c:\users\даша\source\repos\auditorka\auditorka\main.c(16): warning C4307: +: переполнение целой константы
+  Создание кода
+  Создание кода завершено
+  3 of 4 functions (75.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  auditorka.vcxproj -> C:\Users\Даша\source\repos\auditorka\Release\auditorka.exe

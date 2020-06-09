@@ -1,0 +1,3 @@
+﻿  main.c
+c:\users\даша\source\repos\auditorka\auditorka\main.c(16): warning C4307: +: переполнение целой константы
+  auditorka.vcxproj -> C:\Users\Даша\source\repos\auditorka\Debug\auditorka.exe
